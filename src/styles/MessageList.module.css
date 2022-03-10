@@ -1,0 +1,28 @@
+.container {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+    color: hsl(160, 29%, 20%);
+    margin-bottom: 16px;
+}
+
+.lista{
+    border-radius: 5px;
+    padding: 6px;
+    margin-bottom:12px ;
+}
+
+.lista:hover{
+    color: rgb(21, 31, 27);
+}
+
+
+.fotoGit{
+width:20px ;
+height:20px ;
+border-radius: 50%;
+display: inline-block;
+margin-right: 8px;
+}
+

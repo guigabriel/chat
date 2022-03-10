@@ -1,0 +1,16 @@
+.Header{
+    display: flex;
+    width: 100%;
+    margin-bottom: 16px;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 2px;
+    border-radius: 10px;
+}
+
+.imagem{
+  border-radius: 10px;
+  padding: 5px;
+  width: 150px;
+  
+}
