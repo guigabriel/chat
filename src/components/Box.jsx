@@ -40,7 +40,7 @@ export default function Box() {
                     type="text"
                     value={username}
                     onChange={handleChange}
-                    placeholder='Digite aqui'
+                    placeholder='Digite seu usuário do GitHub'
                     className={styles.caixa}
                     onKeyPress={(event) => {
                         if(event.key === 'Enter' && username.length > 3){

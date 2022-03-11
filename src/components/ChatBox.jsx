@@ -61,15 +61,11 @@ export default function ChatBox() {
     }, [])
 
     function handleNovaMensagem(novaMensagem) {
+        const mensagem = {
+            de: usuarioLogado,
+            texto: novaMensagem,
+        };
 
-        if (novaMensagem !== "") {
-            const mensagem = {
-                de: usuarioLogado,
-                texto: novaMensagem,
-            };
-            
-
-        }
         supabaseClient
             .from('mensagens')
             .insert([
@@ -81,12 +77,7 @@ export default function ChatBox() {
         setMensagem('')
     }
 
-    const handleRemove = id => {
-        const removeArr = [...valorAtualDaLista]
-          .filter(novaMensagem => novaMensagem.id !== id)
     
-        setListaDeMensagens(removeArr)
-      }
 
     return (
         <div className={styles.container}>
@@ -97,6 +88,7 @@ export default function ChatBox() {
 
                 <MessageList
                     mensagens={ListaDeMensagens}
+                    mensagem={mensagem}
                     // handleRemove={handleRemove}
                     username={username}
                 />

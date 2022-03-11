@@ -14,10 +14,10 @@ export default function MessageList(props) {
                         className={styles.lista}
                         key={mensagem.id}>
 
-                        <div styleSheet={{ marginBottom: '8px', }}>
+                        <div styleSheet={{ marginBottom: '8px', display: 'flex' }}>
 
                             <img className={styles.fotoGit}
-                                src="{`https://github.com/${mensagem.de}.png`}"
+                                src={`https://github.com/${mensagem.de}.png`}
                                 alt="Imagem de usuário" />
 
                             <h3 className={styles.forte}>{mensagem.de}</h3>
