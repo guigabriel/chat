@@ -40,9 +40,10 @@ export default function ChatBox() {
             .select('*')
             .order('id', { ascending: false })
             .then(({ data }) => {
-                //console.log('Dados da consulta:', data)
+
                 setListaDeMensagens(data)
             })
+
         const subscription = escutaMensagemEmTempoReal((novaMensagem) => {
             console.log('Nova mensagem:', novaMensagem);
             console.log('listaDeMensagens:', ListaDeMensagens);
@@ -77,47 +78,61 @@ export default function ChatBox() {
         setMensagem('')
     }
 
+
+    function removeMensagem() {
+        
+            supabaseClient
+                .from('mensagens')
+                .delete()
+                .match({ id: mensagem.id })
+                .then(() => {
+                    let indice = ListaDeMensagens.indexOf(mensagem);
+
+                    ListaDeMensagens.splice(indice, 1)
+
+                    setListaDeMensagens([...ListaDeMensagens])
+                })
+        }
     
 
-    return (
-        <div className={styles.container}>
+        return (
+            <div className={styles.container}>
 
-            <Header username={username}
-                name={name} />
-            <div className={styles.teste}>
+                <Header username={username}
+                    name={name} />
+                <div className={styles.teste}>
 
-                <MessageList
-                    mensagens={ListaDeMensagens}
-                    mensagem={mensagem}
-                    // handleRemove={handleRemove}
-                    username={username}
-                />
-
-                <form
-                    styleSheet={{
-                        display: 'flex',
-                        alignItems: 'center',
-                    }}>
-
-                    <input
-                        type="text"
-                        value={mensagem}
-                        onChange={(event) => {
-                            const valor = event.target.value
-                            setMensagem(valor)
-                        }}
-
-                        onKeyPress={(event) => {
-                            if (event.key === 'Enter') {
-                                event.preventDefault()
-                                handleNovaMensagem(mensagem)
-                            }
-                        }}
-                        placeholder="Insira sua mensagem aqui..."
-                        className={styles.text}
+                    <MessageList
+                        mensagens={ListaDeMensagens}
+                        onRemove={removeMensagem}
+                        username={username}
                     />
-                </form>
+
+                    <form
+                        styleSheet={{
+                            display: 'flex',
+                            alignItems: 'center',
+                        }}>
+
+                        <input
+                            type="text"
+                            value={mensagem}
+                            onChange={(event) => {
+                                const valor = event.target.value
+                                setMensagem(valor)
+                            }}
+
+                            onKeyPress={(event) => {
+                                if (event.key === 'Enter') {
+                                    event.preventDefault()
+                                    handleNovaMensagem(mensagem)
+                                }
+                            }}
+                            placeholder="Insira sua mensagem aqui..."
+                            className={styles.text}
+                        />
+                    </form>
+                </div>
             </div>
-        </div>
-    )
-}
+        )
+    }

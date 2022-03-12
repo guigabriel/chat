@@ -33,6 +33,7 @@ backdrop-filter: blur(6.3px);
     flex-direction: column;
     border-radius: 5px;
     padding: 16px;
+    overflow:scroll;
 }
 
 .text{

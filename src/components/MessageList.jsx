@@ -1,5 +1,5 @@
 import styles from '../styles/MessageList.module.css'
-import AiOutlineCloseCircle from 'react-icons/ai'
+
 
 export default function MessageList(props) {
 
@@ -22,10 +22,9 @@ export default function MessageList(props) {
 
                             <h3 className={styles.forte}>{mensagem.de}</h3>
 
-                            {/* <AiOutlineCloseCircle
-                                onClick={() => handleRemove(mensagem.id)}
-                                className='delete-icon'
-                            /> */}
+                            <button onClick={() => props.onRemove(mensagem)  }>x</button>
+
+
 
                             <span styleSheet={{
                                 fontSize: '10px',

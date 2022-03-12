@@ -15,6 +15,25 @@ a {
 
 * {
   box-sizing: border-box;
- 
 
 }
+
+  
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #1b161d;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+  }
+
+  
+ 
+
+
