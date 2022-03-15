@@ -14,6 +14,7 @@
     backdrop-filter: blur(6.3px);
     border: 1px solid rgba(255, 255, 255, 0.51);
 }
+
 /*Formulário */
 .formulario{
     color: aliceblue;
@@ -26,7 +27,6 @@
 }
 
 .caixa{
-
   font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 1.2rem;
@@ -44,12 +44,7 @@
 .caixa::placeholder  {
   color: #fff;
   font-size: medium;
-  /* opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translateY(-4rem);
-  transform: translateY(-4rem); */
 }
-
 
 .botao{
 color: #fff;
@@ -67,7 +62,8 @@ border-radius: 5px;
 .botao:hover {
     transition: 1s ease-in-out;
     background: #4F95DA;
-  }
+}
+
 
 /*Imagem*/
 .imagem{
@@ -92,7 +88,6 @@ border-radius: 5px;
     width: 100%;
     height: auto;
     display: block;
-
 }
 
 .nome{

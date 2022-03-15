@@ -23,7 +23,7 @@ export default function Box() {
             })
     }, [username])
 
-    
+
 
 
     const handleChange = e => {
@@ -43,15 +43,15 @@ export default function Box() {
                     placeholder='Digite seu usuário do GitHub'
                     className={styles.caixa}
                     onKeyPress={(event) => {
-                        if(event.key === 'Enter' && username.length > 3){
-                           event.preventDefault(roteamento.push(`/chat?username=${username}`)) 
+                        if (event.key === 'Enter' && username.length > 3) {
+                            event.preventDefault(roteamento.push(`/chat?username=${username}`))
                         }
                     }} />
 
                 <button
                     type="button"
                     onClick={() => roteamento.push(`/chat?username=${username}`)}
-                    
+
                     disabled={username.length < 3 ? true : false}
                     className={styles.botao}
                 >
@@ -66,9 +66,9 @@ export default function Box() {
 
 
                 <div>
-                   <h2 className={styles.nome} >{nome} </h2> 
+                    <h2 className={styles.nome} >{nome} </h2>
                 </div>
-                
+
 
 
                 <img className={styles.vercel} src={` ${username.length >= 3 ? statusUsuario : ''}`} />

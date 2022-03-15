@@ -1,4 +1,4 @@
-import {BsFillTrashFill} from 'react-icons/bs'
+import { BsFillTrashFill } from 'react-icons/bs'
 import React from 'react';
 
 export function DeleteButton(props) {
@@ -7,9 +7,9 @@ export function DeleteButton(props) {
             <button
                 onClick={() => props.removeMensagem(props.id)}
             >
-               <BsFillTrashFill/>
+                <BsFillTrashFill />
             </button>
-       
+
         </>
     )
 }
