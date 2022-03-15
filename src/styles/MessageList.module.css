@@ -1,28 +1,59 @@
 .container {
-    overflow: scroll;
+
     display: flex;
     flex-direction: column-reverse;
     flex: 1;
-    color: hsl(160, 29%, 20%);
+    color: #FFFF;
     margin-bottom: 16px;
+    overflow-y: scroll;
 }
 
 .lista{
     border-radius: 5px;
     padding: 6px;
     margin-bottom:12px ;
+    list-style: none;
+    background-color:rgba(33, 41, 49, 0.95) ;
+    width: 50%;
+    
 }
 
 .lista:hover{
     color: rgb(21, 31, 27);
 }
 
-
-.fotoGit{
-width:20px ;
-height:20px ;
-border-radius: 50%;
-display: inline-block;
-margin-right: 8px;
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    
 }
 
+
+.fotoGit{
+width:3vw ;
+border-radius: 200px;
+display: inline-block;
+margin-right: 8px;
+margin-bottom: 10px;
+}
+
+.forte{
+    color: black;
+    margin: 10px 0 ;
+}
+
+
+.figurinha{
+    display: block;
+    max-width: 400px;
+    height: auto;
+    width: 100%;
+}
+
+@media (max-width: 600px){
+    .lista{
+        width: 100%;
+    }
+}

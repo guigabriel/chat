@@ -1,0 +1,67 @@
+.botao{
+ border-radius: 50%;
+ padding:0 3px 0 0 ;
+ min-width: 50px;
+ min-height: 50px;
+ font-size: 20px;
+ margin-bottom: 8px;
+ line-height: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #29333D ;
+ 
+}
+.div{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #181F25;
+    width: 30vw;
+    height: 300px;
+    right: 30px;
+    bottom: 30px;
+    padding: 16px;
+    box-shadow: rgb(4 4 5 / 15%) 0px 0px 0px 1px, rgb(0 0 0 / 24%) 0px 8px 16px 0px;
+}
+
+
+.texto{
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
+    padding-top: 16px;
+    overflow-y: scroll;
+
+}
+
+.itens{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.gif{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ @media (max-width:400px){
+     .div{
+         width: 150px;
+     }
+ }
+
+
+

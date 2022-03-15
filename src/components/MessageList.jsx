@@ -1,52 +1,54 @@
 import styles from '../styles/MessageList.module.css'
+import { DeleteButton } from './ButtonDelete'
 
 
 export default function MessageList(props) {
 
     return (
 
-        <ul className={styles.conatiner} >
+        <div className={styles.container} >
 
             {props.mensagens.map((mensagem) => {
                 return (
 
-                    <li
+                    <div
                         className={styles.lista}
-                        key={mensagem.id}>
+                        key={mensagem.id}  >
 
-                        <div styleSheet={{ marginBottom: '8px', display: 'flex' }}>
-
+                        <div className={styles.cabecalho}>
+                            
                             <img className={styles.fotoGit}
                                 src={`https://github.com/${mensagem.de}.png`}
                                 alt="Imagem de usuário" />
 
                             <h3 className={styles.forte}>{mensagem.de}</h3>
 
-                            <button onClick={() => props.onRemove(mensagem)  }>x</button>
-
-
-
-                            <span styleSheet={{
+                            <span style={{
                                 fontSize: '10px',
-                                marginLeft: '8px',
-                                color: 'blue'
-                            }}>
-                                {(new Date().toLocaleDateString())}
+                                marginLeft: '15px',
+                                color: '#FFFFFF',
+                                marginRight:'5vw',
+                            }}>{(new Date().toLocaleDateString())}
+                                
                             </span>
+
+                            
+                           {mensagem.de === props.username ?  <DeleteButton id={mensagem.id} removeMensagem={props.removeMensagem} /> : "" } 
+
                         </div>
 
                         {mensagem.texto.startsWith(':sticker:')
                             ? (
-                                <img src={mensagem.texto.replace(':sticker:', '')} />
+                                <img src={mensagem.texto.replace(':sticker:', '')} className={styles.figurinha} />
                             )
                             :
                             (mensagem.texto
                             )}
-                    </li>
+                    </div>
                 )
             })}
 
 
-        </ul>
+        </div>
     )
 }

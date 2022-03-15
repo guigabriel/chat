@@ -18,7 +18,7 @@ a {
 
 }
 
-  
+/*   
   *::-webkit-scrollbar {
     width: 16px;
   }
@@ -31,9 +31,18 @@ a {
     background-color: #1b161d;
     border-radius: 10px;
     border: 3px none #ffffff;
-  }
+  } */
 
-  
- 
+  *::-webkit-scrollbar {
+    width: 0.5rem;               /* width of the entire scrollbar */
+}
+* ::-webkit-scrollbar-track {
+  background: #313D49;        /* color of the tracking area */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #29333D;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 1px solid #101418;  /* creates padding around scroll thumb */ 
+}
 
 

@@ -4,13 +4,59 @@
     margin-bottom: 16px;
     align-items: center;
     justify-content: space-between;
-    border: solid 2px;
     border-radius: 10px;
+    height: 10vh;
+    background-color: #181F25;
+}
+
+.caixa{
+  display: flex;
+  
 }
 
 .imagem{
-  border-radius: 10px;
+  border-radius: 200px;
   padding: 5px;
-  width: 150px;
+  width: 60px;
   
 }
+
+.usuario{
+  color: antiquewhite;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+.usuario:hover{
+  color:black;
+  transition: 2s;
+}
+
+.botao{
+ 
+    background-color: transparent;
+    border: 3px solid #00d7c3;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #00d7c3;
+    margin-right: 10px;
+  
+  
+}
+.botao:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+  }
+
+  /* @media (max-width:450px) {
+    .Header{
+      flex-direction: column;
+    }
+
+  } */
+
+  @media(max-width:400px){
+    .usuario{
+      display: none;
+    }
+  }
